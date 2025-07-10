@@ -74,7 +74,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                src="/softconbusinessolution.avif"
                 alt="Code visualization with data flowing through geometric patterns"
                 className="rounded-xl shadow-2xl"
               />
