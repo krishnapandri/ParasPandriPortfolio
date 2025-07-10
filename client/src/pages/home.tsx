@@ -6,6 +6,13 @@ import SkillsSection from "@/components/skills-section";
 import ExperienceTimeline from "@/components/experience-timeline";
 import ProjectsShowcase from "@/components/projects-showcase";
 import ContactForm from "@/components/contact-form";
+import ThemeToggle from "@/components/theme-toggle";
+import ScrollProgress from "@/components/scroll-progress";
+import Testimonials from "@/components/testimonials";
+import InteractiveBackground from "@/components/interactive-background";
+import StatCounter from "@/components/stats-counter";
+import BackToTop from "@/components/back-to-top";
+import CursorFollow from "@/components/cursor-follow";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
@@ -34,7 +41,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[var(--primary-dark)] text-[var(--text-primary)]">
+    <div className="min-h-screen bg-[var(--primary-dark)] dark:bg-[var(--primary-dark)] bg-white text-[var(--text-primary)] dark:text-[var(--text-primary)] text-gray-900 relative">
+      <CursorFollow />
+      <InteractiveBackground />
+      <ScrollProgress />
+      <ThemeToggle />
+      <BackToTop />
       <Navigation activeSection={activeSection} />
       
       <AnimatedHero />
@@ -87,8 +99,21 @@ export default function Home() {
                   transition={{ delay: 0.4, duration: 0.5 }}
                   className="text-center p-4 bg-[var(--primary-dark)] rounded-lg"
                 >
-                  <div className="text-2xl font-bold gradient-text">2+</div>
+                  <div className="text-2xl font-bold gradient-text">
+                    <StatCounter end={2} suffix="+" />
+                  </div>
                   <div className="text-[var(--text-secondary)]">Years Experience</div>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 0.5 }}
+                  className="text-center p-4 bg-[var(--primary-dark)] rounded-lg"
+                >
+                  <div className="text-2xl font-bold gradient-text">
+                    <StatCounter end={150} suffix="+" />
+                  </div>
+                  <div className="text-[var(--text-secondary)]">Bugs Resolved</div>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -96,8 +121,21 @@ export default function Home() {
                   transition={{ delay: 0.6, duration: 0.5 }}
                   className="text-center p-4 bg-[var(--primary-dark)] rounded-lg"
                 >
-                  <div className="text-2xl font-bold gradient-text">10+</div>
+                  <div className="text-2xl font-bold gradient-text">
+                    <StatCounter end={10} suffix="+" />
+                  </div>
                   <div className="text-[var(--text-secondary)]">Projects Completed</div>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7, duration: 0.5 }}
+                  className="text-center p-4 bg-[var(--primary-dark)] rounded-lg"
+                >
+                  <div className="text-2xl font-bold gradient-text">
+                    <StatCounter end={91} suffix="%" />
+                  </div>
+                  <div className="text-[var(--text-secondary)]">Academic Score</div>
                 </motion.div>
               </div>
             </motion.div>
@@ -108,6 +146,7 @@ export default function Home() {
       <SkillsSection />
       <ExperienceTimeline />
       <ProjectsShowcase />
+      <Testimonials />
       <ContactForm />
 
       {/* Footer */}

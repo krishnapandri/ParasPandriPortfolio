@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Download, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import TypingAnimation from "./typing-animation";
 
 export default function AnimatedHero() {
   const codeSnippets = [
@@ -42,14 +43,12 @@ export default function AnimatedHero() {
             animate={{ 
               opacity: 1, 
               y: 0,
-              x: [0, 10, 0],
-              y: [0, -10, 0]
+              x: [0, 10, 0]
             }}
             transition={{ 
               delay: snippet.delay,
               duration: 0.8,
-              x: { repeat: Infinity, duration: 6 + index },
-              y: { repeat: Infinity, duration: 4 + index }
+              x: { repeat: Infinity, duration: 6 + index }
             }}
             className={`code-block absolute p-4 rounded-lg ${
               index === 0 ? 'top-20 left-10' :
@@ -83,14 +82,24 @@ export default function AnimatedHero() {
             Hi, I'm <span className="gradient-text">Paras Pandri</span>
           </motion.h1>
           
-          <motion.p 
+          <motion.div 
             className="text-xl md:text-2xl text-[var(--text-secondary)] mb-8 max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Software Engineer crafting innovative solutions with clean code and cutting-edge technology
-          </motion.p>
+            <TypingAnimation
+              texts={[
+                "Software Engineer crafting innovative solutions",
+                "Full-stack developer with expertise in React & Angular",
+                "Problem solver debugging production environments",
+                "Code optimizer improving system performance"
+              ]}
+              speed={80}
+              deleteSpeed={40}
+              delayBetween={3000}
+            />
+          </motion.div>
           
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"

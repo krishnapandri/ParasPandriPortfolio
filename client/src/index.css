@@ -3,34 +3,34 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(0, 0%, 4%);
-  --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(240, 3.7%, 15.9%);
-  --muted-foreground: hsl(240, 5%, 64.9%);
-  --popover: hsl(240, 10%, 3.9%);
-  --popover-foreground: hsl(0, 0%, 98%);
-  --card: hsl(240, 3.7%, 15.9%);
-  --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(240, 3.7%, 15.9%);
-  --input: hsl(240, 3.7%, 15.9%);
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222.2, 84%, 4.9%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222.2, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222.2, 84%, 4.9%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
   --primary: hsl(263, 70%, 50%);
   --primary-foreground: hsl(0, 0%, 98%);
-  --secondary: hsl(240, 3.7%, 15.9%);
-  --secondary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222.2, 84%, 4.9%);
   --accent: hsl(263, 70%, 50%);
-  --accent-foreground: hsl(0, 0%, 98%);
-  --destructive: hsl(0, 62.8%, 30.6%);
-  --destructive-foreground: hsl(0, 0%, 98%);
+  --accent-foreground: hsl(222.2, 84%, 4.9%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
   --ring: hsl(263, 70%, 50%);
   --radius: 0.5rem;
   
-  /* Custom portfolio colors */
-  --primary-dark: hsl(0, 0%, 6%);
-  --secondary-dark: hsl(240, 2%, 10%);
+  /* Custom portfolio colors - Light theme */
+  --primary-dark: hsl(0, 0%, 98%);
+  --secondary-dark: hsl(210, 40%, 96%);
   --accent-blue: hsl(230, 76%, 60%);
   --accent-purple: hsl(263, 70%, 60%);
-  --text-primary: hsl(0, 0%, 98%);
-  --text-secondary: hsl(240, 5%, 64%);
+  --text-primary: hsl(222.2, 84%, 4.9%);
+  --text-secondary: hsl(215.4, 16.3%, 46.9%);
   --success: hsl(142, 71%, 45%);
 }
 
@@ -54,6 +54,15 @@
   --destructive: hsl(0, 62.8%, 30.6%);
   --destructive-foreground: hsl(0, 0%, 98%);
   --ring: hsl(263, 70%, 50%);
+  
+  /* Custom portfolio colors - Dark theme */
+  --primary-dark: hsl(0, 0%, 6%);
+  --secondary-dark: hsl(240, 2%, 10%);
+  --accent-blue: hsl(230, 76%, 60%);
+  --accent-purple: hsl(263, 70%, 60%);
+  --text-primary: hsl(0, 0%, 98%);
+  --text-secondary: hsl(240, 5%, 64%);
+  --success: hsl(142, 71%, 45%);
 }
 
 @layer base {
