@@ -20,12 +20,36 @@ export default function ExperienceTimeline() {
       type: "education",
       title: "Bachelor of Information Technology",
       company: "SIES College of Commerce And Economics",
-      period: "Graduated April 2023",
+      period: "2020 - April 2023",
       location: "CGPA: 9.1",
       achievements: [
         "Specialized in software development and programming",
         "Completed projects in web development and mobile applications",
         "Strong foundation in computer science fundamentals"
+      ]
+    },
+    {
+      type: "education",
+      title: "Higher Secondary Certificate (HSC) - Science",
+      company: "Vani Vidyalaya",
+      period: "2018 - 2020",
+      location: "Mulund | 67%",
+      achievements: [
+        "Completed 12th grade with Science stream",
+        "Built strong foundation in Mathematics and Physics",
+        "Developed analytical and problem-solving skills"
+      ]
+    },
+    {
+      type: "education",
+      title: "Secondary School Certificate (SSC)",
+      company: "St John The Baptist High School",
+      period: "2018",
+      location: "Thane | 80.40%",
+      achievements: [
+        "Completed 10th grade with excellent academic performance",
+        "Strong foundation in core subjects",
+        "Developed discipline and study habits"
       ]
     }
   ];
