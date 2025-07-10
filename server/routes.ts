@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { z } from "zod";
 import { storage } from "./storage";
+import { sendContactNotification } from "./email";
 
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -15,9 +16,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = contactSchema.parse(req.body);
       
-      // In a real application, you would send an email or save to database
-      // For now, we'll just log the contact submission
+      // Log the contact submission
       console.log("Contact form submission:", validatedData);
+      
+      // Send email notification
+      try {
+        await sendContactNotification(validatedData);
+        console.log("Email notification sent successfully");
+      } catch (emailError) {
+        console.error("Failed to send email notification:", emailError);
+        // Continue processing even if email fails
+      }
       
       res.json({ 
         success: true, 
