@@ -87,7 +87,7 @@ export default function Home() {
                   transition={{ delay: 0.4, duration: 0.5 }}
                   className="text-center p-4 bg-[var(--primary-dark)] rounded-lg"
                 >
-                  <div className="text-2xl font-bold gradient-text">1+</div>
+                  <div className="text-2xl font-bold gradient-text">2+</div>
                   <div className="text-[var(--text-secondary)]">Years Experience</div>
                 </motion.div>
                 <motion.div

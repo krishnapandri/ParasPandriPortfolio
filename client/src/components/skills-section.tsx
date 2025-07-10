@@ -24,8 +24,8 @@ export default function SkillsSection() {
       icon: Layers,
       color: "var(--accent-purple)",
       skills: [
-        { name: "Angular", level: 85 },
-        { name: "React", level: 80 },
+        { name: "Angular", level: 95 },
+        { name: "React", level: 50 },
         { name: ".NET Framework", level: 75 },
         { name: "Bootstrap", level: 85 },
       ]
@@ -36,7 +36,7 @@ export default function SkillsSection() {
       color: "var(--success)",
       skills: [
         { name: "Git", level: 85 },
-        { name: "MySQL", level: 80 },
+        { name: "MSSQL", level: 80 },
         { name: "Socket.io", level: 75 },
         { name: "Android Studio", level: 70 },
       ]

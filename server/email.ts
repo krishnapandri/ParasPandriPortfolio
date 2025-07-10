@@ -1,5 +1,7 @@
 import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
 
+dotenv.config();
 interface ContactEmailData {
   name: string;
   email: string;
@@ -18,8 +20,7 @@ export async function sendContactNotification(data: ContactEmailData): Promise<b
     console.log('========================\n');
 
     // If you have Gmail credentials, uncomment this section:
-    /*
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER, // Your Gmail address
@@ -58,7 +59,6 @@ export async function sendContactNotification(data: ContactEmailData): Promise<b
     };
 
     await transporter.sendMail(mailOptions);
-    */
 
     return true;
   } catch (error) {
