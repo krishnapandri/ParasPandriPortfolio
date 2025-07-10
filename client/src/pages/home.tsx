@@ -8,7 +8,7 @@ import ProjectsShowcase from "@/components/projects-showcase";
 import ContactForm from "@/components/contact-form";
 import ThemeToggle from "@/components/theme-toggle";
 import ScrollProgress from "@/components/scroll-progress";
-import Testimonials from "@/components/testimonials";
+
 import InteractiveBackground from "@/components/interactive-background";
 import StatCounter from "@/components/stats-counter";
 import BackToTop from "@/components/back-to-top";
@@ -146,7 +146,6 @@ export default function Home() {
       <SkillsSection />
       <ExperienceTimeline />
       <ProjectsShowcase />
-      <Testimonials />
       <ContactForm />
 
       {/* Footer */}

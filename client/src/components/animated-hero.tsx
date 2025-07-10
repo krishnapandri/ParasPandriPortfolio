@@ -11,11 +11,25 @@ export default function AnimatedHero() {
     { code: 'git commit -m "Ship it!"', delay: 3 },
   ];
 
-  const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = '/paras-pandri-resume.pdf';
-    link.download = 'Paras_Pandri_Resume.pdf';
-    link.click();
+  const handleDownloadResume = async () => {
+    try {
+      const response = await fetch('/paras-pandri-resume.pdf');
+      if (!response.ok) {
+        throw new Error('Resume not found');
+      }
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Paras_Pandri_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      alert('Resume is not available for download at the moment.');
+    }
   };
 
   const scrollToWork = () => {
