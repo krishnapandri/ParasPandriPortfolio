@@ -13,7 +13,7 @@ export default function AnimatedHero() {
 
   const handleDownloadResume = async () => {
     try {
-      const response = await fetch('/paras-pandri-resume.pdf');
+      const response = await fetch('/Paras_Pandri_Resume_SDE_1.pdf');
       if (!response.ok) {
         throw new Error('Resume not found');
       }
